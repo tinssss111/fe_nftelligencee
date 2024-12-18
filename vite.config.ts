@@ -24,4 +24,8 @@ export default defineConfig({
   define: {
     'process.env': {},
   },
+  server: {
+    host: '0.0.0.0', // Cho phép truy cập từ bên ngoài
+    port: process.env.PORT ? Number(process.env.PORT) : 3000, // Sử dụng cổng do Render chỉ định
+  },
 })
